@@ -1,6 +1,10 @@
 // Server-side code (Node.js)
-const { createClient } = require('@supabase/supabase-js');
-const supabase = createClient('https://pijomvppotzjrcolvlxk.supabase.co', 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InBpam9tdnBwb3R6anJjb2x2bHhrIiwicm9sZSI6ImFub24iLCJpYXQiOjE2OTcxNjMzMjMsImV4cCI6MjAxMjczOTMyM30.rS6ObCTeutOtC2kxK9kLzCNrEuOJMwkIdpWMgdxj64o');
+
+import { createClient } from '@supabase/supabase-js'
+
+const supabaseUrl = 'https://pijomvppotzjrcolvlxk.supabase.co'
+const supabaseKey = process.env.eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InBpam9tdnBwb3R6anJjb2x2bHhrIiwicm9sZSI6ImFub24iLCJpYXQiOjE2OTcxNjMzMjMsImV4cCI6MjAxMjczOTMyM30.rS6ObCTeutOtC2kxK9kLzCNrEuOJMwkIdpWMgdxj64o
+const supabase = createClient(supabaseUrl, supabaseKey)
 
 // Handle form submission and database interaction
 app.post('/submit', async (req, res) => {
